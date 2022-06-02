@@ -1,8 +1,6 @@
 ﻿  Source.cpp
 c:\users\александр\source\repos\graph\graph\vertexcircle.h(29): warning C4244: аргумент: преобразование "float" в "unsigned int", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\vertexcircle.h(37): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\vertexcircle.h(49): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\vertexcircle.h(69): warning C4244: аргумент: преобразование "const T" в "T", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\vertexcircle.h(46): warning C4244: аргумент: преобразование "const T" в "T", возможна потеря данных
           with
           [
               T=int
@@ -11,7 +9,7 @@ c:\users\александр\source\repos\graph\graph\vertexcircle.h(69): warning
           [
               T=float
           ]
-c:\users\александр\source\repos\graph\graph\vertexcircle.h(98): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\vertexcircle.h(74): warning C4244: return: преобразование "float" в "int", возможна потеря данных
 c:\users\александр\source\repos\graph\graph\button.h(41): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
 c:\users\александр\source\repos\graph\graph\button.h(41): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
@@ -113,16 +111,16 @@ c:\users\александр\source\repos\graph\graph\functions.h(555): warning C
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\source.cpp(132): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(186): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(207): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(439): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(467): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(130): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(184): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(205): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(437): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(465): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
 c:\users\александр\source\repos\graph\graph\graph.h(404): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   c:\users\александр\source\repos\graph\graph\graph.h(403): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
   c:\users\александр\source\repos\graph\graph\graph.h(113): note: выполняется компиляция ссылки на экземпляр шаблон функции "int Graph<int>::get_vertex_index(const std::string &)"
   c:\users\александр\source\repos\graph\graph\graph.h(101): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  c:\users\александр\source\repos\graph\graph\source.cpp(100): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
+  c:\users\александр\source\repos\graph\graph\source.cpp(98): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
           with
           [
               T=int

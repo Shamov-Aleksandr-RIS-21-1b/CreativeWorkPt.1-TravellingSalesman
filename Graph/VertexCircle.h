@@ -32,37 +32,14 @@ public:
 		text.setOrigin(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2);
 		text.setPosition(C.getPosition().x, C.getPosition().y - text.getCharacterSize() / 4);
 	}
-	void set_radius(const int& radius)
-	{
-		C.setRadius(radius);
-	}
 	void set_color(const Color& color)
 	{
 		C.setFillColor(color);
-	}
-	void set_outline(const Color& color)
-	{
-		C.setOutlineColor(color);
-	}
-	void set_thick(const int& thick)
-	{
-		C.setOutlineThickness(thick);
 	}
 	void set_position(const float& x, const float& y)
 	{
 		C.setPosition(x, y);
 		text.setPosition(C.getPosition().x, C.getPosition().y - text.getCharacterSize() / 4);
-	}
-	void set_font(const string& filename)
-	{
-		Font font;
-		bool f = font.loadFromFile(filename);
-		text.setFont(font);
-		if (!f) exit(1);
-	}
-	void set_text_color(const Color& color)
-	{
-		text.setFillColor(color);
 	}
 	bool contain(const Vector2i& mouse)
 	{
@@ -80,7 +57,6 @@ public:
 		{
 			C.setRadius(textRect.width / 2);
 		}
-
 		C.setOrigin(C.getRadius(), C.getRadius());
 		text.setOrigin(textRect.width / 2, textRect.height / 2);
 		text.setPosition(C.getPosition().x, C.getPosition().y - text.getCharacterSize() / 4);

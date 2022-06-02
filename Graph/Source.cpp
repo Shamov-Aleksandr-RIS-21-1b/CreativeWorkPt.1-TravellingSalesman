@@ -16,8 +16,6 @@ const int AllButtonsTextSize = 50;
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
-
 	Graph<int> G;
 
 	RenderWindow Window(VideoMode(800, 600), "GraphConstructor");

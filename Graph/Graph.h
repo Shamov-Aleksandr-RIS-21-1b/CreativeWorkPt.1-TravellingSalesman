@@ -39,6 +39,8 @@ protected:
 	vector<vector<T>> matrix;
 	vector<GraphVertex<T>> vertexes;
 
+	bool all_visited(const vector<bool>& visited);
+	GraphVertex<T>* find_not_visited(const vector<bool>& visited, const string& current_vertex);
 	int get_width();
 	void print_str(const int& width);
 	void continue_depth_first_search(const string& current_vertex, vector<bool>& visited);
@@ -87,8 +89,6 @@ public:
 	bool is_weighted();
 
 	void Dijkstra(const string& start_vertex);
-	GraphVertex<T>* find_not_visited(const vector<bool>& visited, const string& current_vertex);
-	bool all_visited(const vector<bool>& visited);
 
 	vector<GraphVertex<T>*> Salesman(const string& start_vertex);
 	vector<GraphVertex<T>*> what_neighbour(const string& start_vertex);

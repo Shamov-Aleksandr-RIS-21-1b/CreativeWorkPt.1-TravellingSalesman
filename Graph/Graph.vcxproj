@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="GraphDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

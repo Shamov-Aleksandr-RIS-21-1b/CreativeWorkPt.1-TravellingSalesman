@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="GraphDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h">
