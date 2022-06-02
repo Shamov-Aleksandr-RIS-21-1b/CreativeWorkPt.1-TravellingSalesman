@@ -1,0 +1,10 @@
+#pragma once
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::vector;
+using std::queue;
+using std::setw;
+using std::setprecision;
+using std::to_string;
