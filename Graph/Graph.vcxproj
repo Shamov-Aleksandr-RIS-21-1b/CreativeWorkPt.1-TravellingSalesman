@@ -148,7 +148,6 @@
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="TextMessage.h" />
-    <ClInclude Include="usingstd.h" />
     <ClInclude Include="VertexCircle.h" />
   </ItemGroup>
   <ItemGroup>

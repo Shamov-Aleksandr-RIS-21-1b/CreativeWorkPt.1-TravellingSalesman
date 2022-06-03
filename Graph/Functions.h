@@ -4,7 +4,6 @@
 #include "Button.h";
 #include "EdgeLine.h"
 #include "cstdarg"
-#include "usingstd.h"
 
 inline void DrawButtons(RenderWindow& Window, int count, ...)
 {
@@ -16,7 +15,7 @@ inline void DrawButtons(RenderWindow& Window, int count, ...)
 	}
 }
 
-inline void DrawVertexes(RenderWindow& Window, const vector<VertexCircle*>& drawing)
+inline void DrawVertexes(RenderWindow& Window, const std::vector<VertexCircle*>& drawing)
 {
 	for (int i = 0; i < drawing.size(); i++)
 	{
@@ -24,7 +23,7 @@ inline void DrawVertexes(RenderWindow& Window, const vector<VertexCircle*>& draw
 	}
 }
 
-inline void DrawEdges(RenderWindow& Window, const vector<EdgeLine*>& drawing)
+inline void DrawEdges(RenderWindow& Window, const std::vector<EdgeLine*>& drawing)
 {
 	for (int i = 0; i < drawing.size(); i++)
 	{
@@ -32,7 +31,7 @@ inline void DrawEdges(RenderWindow& Window, const vector<EdgeLine*>& drawing)
 	}
 }
 
-inline bool not_intersection(const vector<VertexCircle*>& v, const Vector2i& mouse)
+inline bool not_intersection(const std::vector<VertexCircle*>& v, const Vector2i& mouse)
 {
 	for (int i = 0; i < v.size(); i++)
 	{
@@ -41,7 +40,7 @@ inline bool not_intersection(const vector<VertexCircle*>& v, const Vector2i& mou
 	return true;
 }
 
-inline void VertexesDefaultColor(vector<VertexCircle*>& verts)
+inline void VertexesDefaultColor(std::vector<VertexCircle*>& verts)
 {
 	for (int i = 0; i < verts.size(); i++)
 	{
@@ -49,7 +48,7 @@ inline void VertexesDefaultColor(vector<VertexCircle*>& verts)
 	}
 }
 
-inline void EdgesDefaultColor(vector<EdgeLine*>& edges)
+inline void EdgesDefaultColor(std::vector<EdgeLine*>& edges)
 {
 	for (int i = 0; i < edges.size(); i++)
 	{
@@ -57,7 +56,7 @@ inline void EdgesDefaultColor(vector<EdgeLine*>& edges)
 	}
 }
 
-inline void CheckVertecies(vector<VertexCircle*>& TmpVertexes)
+inline void CheckVertecies(std::vector<VertexCircle*>& TmpVertexes)
 {
 	if (TmpVertexes.size() > 0)
 	{
@@ -66,7 +65,7 @@ inline void CheckVertecies(vector<VertexCircle*>& TmpVertexes)
 	}
 }
 
-inline void CheckEdges(vector<EdgeLine*>& TmpEdges)
+inline void CheckEdges(std::vector<EdgeLine*>& TmpEdges)
 {
 	if (TmpEdges.size() > 0)
 	{
@@ -75,7 +74,7 @@ inline void CheckEdges(vector<EdgeLine*>& TmpEdges)
 	}
 }
 
-void SetCursor(RenderWindow& Window, const Vector2i& mousePos, vector<VertexCircle*>& VertexDrawingQueue, vector<EdgeLine*>& EdgeDrawingQueue, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton)
+void SetCursor(RenderWindow& Window, const Vector2i& mousePos, std::vector<VertexCircle*>& VertexDrawingQueue, std::vector<EdgeLine*>& EdgeDrawingQueue, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton)
 {
 	bool isCursor = true;
 	if (mousePos.y >= 0)
@@ -296,7 +295,7 @@ void VertexSettingsWindow(VertexCircle*& Vert, Graph<int>& G)
 	}
 }
 
-void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G)
+void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G, std::vector<EdgeLine*> EdgeDrawingQueue)
 {
 	string old_weight = Edge->get_weight();
 	RenderWindow EdgeSettings(VideoMode(400, 50), "EdgeSettings", Style::Close | Style::Titlebar);
@@ -371,7 +370,24 @@ void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G)
 						{
 							if (new_weight == "0")//DELETE
 							{
+								/*G.delete_edge(Edge->get_start()->getText(), Edge->get_end()->getText());
+								delete Edge;
+								Edge = nullptr;*/
+								std::vector<EdgeLine*>::iterator del;
+
+								del = EdgeDrawingQueue.begin();
+								for (del; del != EdgeDrawingQueue.end() && (*del != Edge); del++) {}
 								G.delete_edge(Edge->get_start()->getText(), Edge->get_end()->getText());
+								if (G.is_edge(Edge->get_end()->getText(), Edge->get_start()->getText()))
+								{
+									int j = 0;
+									while (j < EdgeDrawingQueue.size() && (EdgeDrawingQueue[j]->get_start() != Edge->get_end() || EdgeDrawingQueue[j]->get_end() != Edge->get_start()))
+									{
+										j++;
+									}
+									EdgeDrawingQueue[j]->setAnotherEdge(false);
+								}
+								EdgeDrawingQueue.erase(del);
 								delete Edge;
 								Edge = nullptr;
 
@@ -380,7 +396,7 @@ void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G)
 							}
 							else
 							{
-								Edge->set_weight(to_string(stoi(new_weight)));
+								Edge->set_weight(std::to_string(stoi(new_weight)));
 								G.set_edge_weight(Edge->get_start()->getText(), Edge->get_end()->getText(), stoi(new_weight), true);
 								message.setFillColor(Color::Green);
 								message.setString("Changes were saved");
@@ -409,7 +425,7 @@ void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G)
 	}
 }
 
-void MoveVertex(const RenderWindow& Window, VertexCircle*& movingVert, vector<EdgeLine*>& movingEdges, const Vector2i& mousePos, const Vector2i& prev_mousePos)
+void MoveVertex(const RenderWindow& Window, VertexCircle*& movingVert, std::vector<EdgeLine*>& movingEdges, const Vector2i& mousePos, const Vector2i& prev_mousePos)
 {
 	const int limit = -2;
 	const int indent = 5;
@@ -483,7 +499,7 @@ void MoveVertex(const RenderWindow& Window, VertexCircle*& movingVert, vector<Ed
 	}
 }
 
-void SetResize(RenderWindow& Window, const Vector2i& prevWpos, const Vector2u& prevsize, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton, TextMessage& BMessage, vector<VertexCircle*>& VertexDrawingQueue, vector<EdgeLine*>& EdgeDrawingQueue)
+void SetResize(RenderWindow& Window, const Vector2i& prevWpos, const Vector2u& prevsize, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton, TextMessage& BMessage, std::vector<VertexCircle*>& VertexDrawingQueue, std::vector<EdgeLine*>& EdgeDrawingQueue)
 {
 	if (Window.getSize().x < 800)
 	{

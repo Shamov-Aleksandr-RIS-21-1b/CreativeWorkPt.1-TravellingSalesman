@@ -4,10 +4,10 @@
 #include "VertexCircle.h"
 #include "Button.h"
 #include "TextMessage.h"
-#include "usingstd.h"
 #include "Functions.h"
 #include "EdgeLine.h"
 using namespace sf;
+using namespace std;
 
 const Color WindowColor = Color(240, 211, 193);
 const int SpawnX = 60;
@@ -513,7 +513,7 @@ int main()
 
 							Window.display();
 
-							EdgeSettingsWindow(EdgeDrawingQueue[i], G);
+							EdgeSettingsWindow(EdgeDrawingQueue[i], G, EdgeDrawingQueue);
 
 							Continue = false;
 							if (EdgeDrawingQueue[i] != nullptr) EdgeDrawingQueue[i]->set_color(EdgeDefaultColor);

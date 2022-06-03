@@ -12,11 +12,11 @@ class EdgeLine : public Drawable
 private:
 	VertexCircle* Vstart;
 	VertexCircle* Vend;
-	vector<Vertex> Line;
+	std::vector<Vertex> Line;
 	Font font;
 	Text weight;
 	Color color;
-	vector<Vertex> triangle;
+	std::vector<Vertex> triangle;
 	int scale;
 	bool AnotherEdge;
 public:

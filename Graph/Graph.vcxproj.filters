@@ -34,9 +34,6 @@
     <ClInclude Include="TextMessage.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="usingstd.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="VertexCircle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
