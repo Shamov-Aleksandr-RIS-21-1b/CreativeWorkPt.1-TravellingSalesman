@@ -87,7 +87,7 @@ int main()
 							AddEdgeButton.setMode(Off);
 						}
 						AddVertexButton.setMode(On);
-						BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
+						BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
 						AddedVertex = new VertexCircle("V" + to_string(vi));
 						AddedVertex->set_position(SpawnX, SpawnY);
 						AddedVertex->set_color(VertexHighlightedColor);
@@ -100,8 +100,8 @@ int main()
 					{
 						if (AddEdgeButton.Mode() == On)
 						{
-							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
-							else BMessage.set_string(Window, "");
+							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
+							else BMessage.set_string(Window, "First, add a couple of vertices.");
 							AddEdgeButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);
@@ -154,7 +154,7 @@ int main()
 					{
 						if (DeleteButton.Mode() == On)
 						{
-							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
+							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
 							else BMessage.set_string(Window, "First, add a couple of vertices.");
 							DeleteButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
@@ -363,8 +363,8 @@ int main()
 					{
 						if (SalesmanButton.Mode() == On)
 						{
-							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
-							else BMessage.set_string(Window, "");
+							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
+							else BMessage.set_string(Window, "First, add a couple of vertices.");
 							SalesmanButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);
