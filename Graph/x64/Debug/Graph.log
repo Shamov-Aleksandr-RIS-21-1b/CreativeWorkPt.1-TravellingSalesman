@@ -104,9 +104,9 @@ c:\users\александр\source\repos\graph\graph\functions.h(571): warning C
           ]
 c:\users\александр\source\repos\graph\graph\source.cpp(127): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
 c:\users\александр\source\repos\graph\graph\source.cpp(181): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(202): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(434): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(462): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(232): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(455): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(483): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
 c:\users\александр\source\repos\graph\graph\graph.h(402): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   c:\users\александр\source\repos\graph\graph\graph.h(401): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
   c:\users\александр\source\repos\graph\graph\graph.h(112): note: выполняется компиляция ссылки на экземпляр шаблон функции "int Graph<int>::get_vertex_index(const std::string &)"

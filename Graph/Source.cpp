@@ -186,14 +186,44 @@ int main()
 								{
 									VertexDrawingQueue[i]->set_color(VertexHighlightedColor);
 									TmpVertexes.push_back(VertexDrawingQueue[i]);
+									for (int j = 0; j < EdgeDrawingQueue.size(); j++)
+									{
+										if (EdgeDrawingQueue[j]->containVert(VertexDrawingQueue[i]) && EdgeDrawingQueue[j]->get_color() == EdgeDefaultColor)
+										{
+											EdgeDrawingQueue[j]->set_color(EdgeHighlightedColor);
+											TmpEdges.push_back(EdgeDrawingQueue[j]);
+										}
+									}
 								}
 								else
 								{
 									VertexDrawingQueue[i]->set_color(VertexDefaultColor);
-
 									vector<VertexCircle*>::iterator it = TmpVertexes.begin();
 									for (it; it != TmpVertexes.end() && *it != VertexDrawingQueue[i]; it++) {}
 									TmpVertexes.erase(it);
+									for (int j = 0; j < TmpEdges.size(); j++)
+									{
+										if (TmpEdges[j]->get_start() == VertexDrawingQueue[i])
+										{
+											if (TmpEdges[j]->get_end()->get_color() == VertexDefaultColor)
+											{
+												TmpEdges[j]->set_color(EdgeDefaultColor);
+												vector<EdgeLine*>::iterator it = TmpEdges.begin() + j;
+												TmpEdges.erase(it);
+												--j;
+											}
+										}
+										else if (TmpEdges[j]->get_end() == VertexDrawingQueue[i])
+										{
+											if (TmpEdges[j]->get_start()->get_color() == VertexDefaultColor)
+											{
+												TmpEdges[j]->set_color(EdgeDefaultColor);
+												vector<EdgeLine*>::iterator it = TmpEdges.begin() + j;
+												TmpEdges.erase(it);
+												--j;
+											}
+										}
+									}
 								}
 								Continue = false;
 							}
@@ -220,11 +250,16 @@ int main()
 								}
 								else
 								{
-									EdgeDrawingQueue[i]->set_color(EdgeDefaultColor);
-
-									vector<EdgeLine*>::iterator it = TmpEdges.begin();
-									for (it; it != TmpEdges.end() && *it != EdgeDrawingQueue[i]; it++) {}
-									TmpEdges.erase(it);
+									for (int j = 0; j < TmpVertexes.size(); j++)
+									{
+										if (!EdgeDrawingQueue[i]->containVert(TmpVertexes[j]))
+										{
+											EdgeDrawingQueue[i]->set_color(EdgeDefaultColor);
+											vector<EdgeLine*>::iterator it = TmpEdges.begin();
+											for (it; it != TmpEdges.end() && *it != EdgeDrawingQueue[i]; it++) {}
+											TmpEdges.erase(it);
+										}
+									}
 								}
 								Continue = false;
 							}
@@ -239,35 +274,6 @@ int main()
 
 						if (DeleteButton.Mode() == On)
 						{
-							for (int i = 0; i < TmpVertexes.size(); i++)
-							{
-								vector<VertexCircle*>::iterator del;
-
-								del = VertexDrawingQueue.begin();
-								for (del; del != VertexDrawingQueue.end() && (*del != TmpVertexes[i]); del++) {}
-								VertexDrawingQueue.erase(del);
-
-								G.delete_vertex(TmpVertexes[i]->getText());
-
-								for (int j = 0; j < EdgeDrawingQueue.size(); ++j)
-								{
-									if (EdgeDrawingQueue[j]->containVert(TmpVertexes[i]))
-									{
-										vector<EdgeLine*>::iterator del;
-										del = EdgeDrawingQueue.begin();
-										for (del; del != EdgeDrawingQueue.end() && (*del != EdgeDrawingQueue[j]); del++) {}
-										delete EdgeDrawingQueue[j];
-										EdgeDrawingQueue[j] = nullptr;
-										EdgeDrawingQueue.erase(del);
-										--j;
-									}
-								}
-
-								delete TmpVertexes[i];
-								TmpVertexes[i] = nullptr;
-							}
-							TmpVertexes.clear();
-
 							for (int i = 0; i < TmpEdges.size(); i++)
 							{
 								vector<EdgeLine*>::iterator del;
@@ -281,7 +287,7 @@ int main()
 									while (j < EdgeDrawingQueue.size() && (EdgeDrawingQueue[j]->get_start() != TmpEdges[i]->get_end() || EdgeDrawingQueue[j]->get_end() != TmpEdges[i]->get_start()))
 									{
 										j++;
-									}	
+									}
 									EdgeDrawingQueue[j]->setAnotherEdge(false);
 								}
 								EdgeDrawingQueue.erase(del);
@@ -289,6 +295,21 @@ int main()
 								TmpEdges[i] = nullptr;
 							}
 							TmpEdges.clear();
+
+							for (int i = 0; i < TmpVertexes.size(); i++)
+							{
+								vector<VertexCircle*>::iterator del;
+
+								del = VertexDrawingQueue.begin();
+								for (del; del != VertexDrawingQueue.end() && (*del != TmpVertexes[i]); del++) {}
+								VertexDrawingQueue.erase(del);
+
+								G.delete_vertex(TmpVertexes[i]->getText());
+
+								delete TmpVertexes[i];
+								TmpVertexes[i] = nullptr;
+							}
+							TmpVertexes.clear();
 						}
 						else if (AddEdgeButton.Mode() == On)
 						{
