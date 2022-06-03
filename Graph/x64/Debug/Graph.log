@@ -31,7 +31,7 @@ c:\users\александр\source\repos\graph\graph\button.h(57): warning C4244
           [
               T=float
           ]
-c:\users\александр\source\repos\graph\graph\textmessage.h(16): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\textmessage.h(17): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=unsigned int
@@ -111,16 +111,16 @@ c:\users\александр\source\repos\graph\graph\functions.h(555): warning C
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\source.cpp(130): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(184): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(205): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(437): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(465): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(131): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(185): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(206): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(438): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(466): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
 c:\users\александр\source\repos\graph\graph\graph.h(404): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   c:\users\александр\source\repos\graph\graph\graph.h(403): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
   c:\users\александр\source\repos\graph\graph\graph.h(113): note: выполняется компиляция ссылки на экземпляр шаблон функции "int Graph<int>::get_vertex_index(const std::string &)"
   c:\users\александр\source\repos\graph\graph\graph.h(101): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  c:\users\александр\source\repos\graph\graph\source.cpp(98): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
+  c:\users\александр\source\repos\graph\graph\source.cpp(99): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
           with
           [
               T=int

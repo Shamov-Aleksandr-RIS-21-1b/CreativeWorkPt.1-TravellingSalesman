@@ -37,7 +37,7 @@ int main()
 	VertexCircle* AddedVertex = nullptr;
 	EdgeLine* AddedEdge = nullptr;
 
-	TextMessage BMessage(Window, "");
+	TextMessage BMessage(Window, "First, add a couple of vertices.");
 
 	vector<VertexCircle*> TmpVertexes;
 	vector<EdgeLine*> TmpEdges;
@@ -62,6 +62,7 @@ int main()
 		{
 			Window.draw(BMessage);
 		}
+		//Window.draw(BMessage);
 		Window.display();
 		
 		SetCursor(Window, mousePos, VertexDrawingQueue, EdgeDrawingQueue, AddVertexButton, AddEdgeButton, DeleteButton, ApplyButton, SalesmanButton);
@@ -158,7 +159,7 @@ int main()
 						if (DeleteButton.Mode() == On)
 						{
 							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
-							else BMessage.set_string(Window, "");
+							else BMessage.set_string(Window, "First, add a couple of vertices.");
 							DeleteButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);
