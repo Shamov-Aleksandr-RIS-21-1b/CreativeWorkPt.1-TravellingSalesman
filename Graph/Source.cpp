@@ -37,7 +37,7 @@ int main()
 	VertexCircle* AddedVertex = nullptr;
 	EdgeLine* AddedEdge = nullptr;
 
-	TextMessage BMessage(Window, "First, add a couple of vertices.");
+	TextMessage BMessage(Window, "");
 
 	vector<VertexCircle*> TmpVertexes;
 	vector<EdgeLine*> TmpEdges;
@@ -101,7 +101,7 @@ int main()
 						if (AddEdgeButton.Mode() == On)
 						{
 							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
-							else BMessage.set_string(Window, "First, add a couple of vertices.");
+							else BMessage.set_string(Window, "");
 							AddEdgeButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);
@@ -155,7 +155,7 @@ int main()
 						if (DeleteButton.Mode() == On)
 						{
 							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
-							else BMessage.set_string(Window, "First, add a couple of vertices.");
+							else BMessage.set_string(Window, "");
 							DeleteButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);
@@ -364,7 +364,7 @@ int main()
 						if (SalesmanButton.Mode() == On)
 						{
 							if (VertexDrawingQueue.size() > 0) BMessage.set_string(Window, "Click and hold the LMB to move the vertex.\nClick RMB to edit a vertex or edge.");
-							else BMessage.set_string(Window, "First, add a couple of vertices.");
+							else BMessage.set_string(Window, "");
 							SalesmanButton.setMode(Off);
 							CheckVertecies(TmpVertexes);
 							CheckEdges(TmpEdges);

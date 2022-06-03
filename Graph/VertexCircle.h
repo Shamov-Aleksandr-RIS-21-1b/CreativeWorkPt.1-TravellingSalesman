@@ -41,9 +41,13 @@ public:
 		C.setPosition(x, y);
 		text.setPosition(C.getPosition().x, C.getPosition().y - text.getCharacterSize() / 4);
 	}
-	bool contain(const Vector2i& mouse)
+	/*bool contain(const Vector2i& mouse)
 	{
 		return C.getGlobalBounds().contains(mouse.x, mouse.y);
+	}*/
+	bool contain(const Vector2i& mouse)
+	{
+		return pow((mouse.x - C.getPosition().x), 2) + pow((mouse.y - C.getPosition().y), 2) < pow(C.getRadius(), 2);
 	}
 	string getText()
 	{
