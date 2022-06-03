@@ -37,35 +37,35 @@ c:\users\александр\source\repos\graph\graph\functions.h(86): warning C4
 c:\users\александр\source\repos\graph\graph\functions.h(98): warning C4018: >=: несоответствие типов со знаком и без знака
 c:\users\александр\source\repos\graph\graph\functions.h(102): warning C4018: >=: несоответствие типов со знаком и без знака
 c:\users\александр\source\repos\graph\graph\functions.h(114): warning C4018: >=: несоответствие типов со знаком и без знака
-c:\users\александр\source\repos\graph\graph\functions.h(436): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(440): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(444): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(433): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(437): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(441): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(453): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(457): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(450): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(454): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(466): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(463): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(470): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(467): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(479): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(476): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(522): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(519): warning C4244: аргумент: преобразование "T" в "T", возможна потеря данных
           with
           [
               T=unsigned int
@@ -74,30 +74,30 @@ c:\users\александр\source\repos\graph\graph\functions.h(522): warning C
           [
               T=float
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(540): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(544): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(548): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(537): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(541): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(545): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(553): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
-c:\users\александр\source\repos\graph\graph\functions.h(557): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(550): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(554): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(562): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(559): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(566): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(563): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(571): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
+c:\users\александр\source\repos\graph\graph\functions.h(568): warning C4244: аргумент: преобразование "T" в "const float", возможна потеря данных
           with
           [
               T=unsigned int

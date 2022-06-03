@@ -541,8 +541,7 @@ int main()
 							else
 							{
 								vector<EdgeLine*>::iterator del;
-								del = EdgeDrawingQueue.begin();
-								for (del; del != EdgeDrawingQueue.end() && (*del != EdgeDrawingQueue[i]); del++) {}
+								del = EdgeDrawingQueue.begin() + i;
 								EdgeDrawingQueue.erase(del);
 							}
 						}

@@ -370,9 +370,6 @@ void EdgeSettingsWindow(EdgeLine*& Edge, Graph<int>& G, std::vector<EdgeLine*> E
 						{
 							if (new_weight == "0")//DELETE
 							{
-								/*G.delete_edge(Edge->get_start()->getText(), Edge->get_end()->getText());
-								delete Edge;
-								Edge = nullptr;*/
 								std::vector<EdgeLine*>::iterator del;
 
 								del = EdgeDrawingQueue.begin();
