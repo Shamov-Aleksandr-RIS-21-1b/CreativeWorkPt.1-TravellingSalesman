@@ -30,6 +30,7 @@ public:
 	}
 	void draw(RenderTarget& target, RenderStates states = RenderStates::Default) const override
 	{
-		target.draw(message);
+		if (message.getString() != "")
+			target.draw(message);
 	}
 };

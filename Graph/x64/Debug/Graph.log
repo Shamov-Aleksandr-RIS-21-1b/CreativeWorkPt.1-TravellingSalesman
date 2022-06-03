@@ -111,16 +111,16 @@ c:\users\александр\source\repos\graph\graph\functions.h(555): warning C
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\source.cpp(131): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(185): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(206): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(438): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\александр\source\repos\graph\graph\source.cpp(466): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(127): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(181): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(202): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(434): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\александр\source\repos\graph\graph\source.cpp(462): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
 c:\users\александр\source\repos\graph\graph\graph.h(404): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   c:\users\александр\source\repos\graph\graph\graph.h(403): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
   c:\users\александр\source\repos\graph\graph\graph.h(113): note: выполняется компиляция ссылки на экземпляр шаблон функции "int Graph<int>::get_vertex_index(const std::string &)"
   c:\users\александр\source\repos\graph\graph\graph.h(101): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  c:\users\александр\source\repos\graph\graph\source.cpp(99): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
+  c:\users\александр\source\repos\graph\graph\source.cpp(95): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::add_vertex(const std::string &,const T &)"
           with
           [
               T=int

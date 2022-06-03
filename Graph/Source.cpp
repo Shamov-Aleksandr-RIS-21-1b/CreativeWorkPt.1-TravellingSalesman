@@ -58,11 +58,7 @@ int main()
 		DrawButtons(Window, 4, AddVertexButton, AddEdgeButton, DeleteButton, SalesmanButton);
 		if (MustShowApply) Window.draw(ApplyButton);
 		DrawVertexes(Window, VertexDrawingQueue);
-		if (BMessage.get_string() != "")
-		{
-			Window.draw(BMessage);
-		}
-		//Window.draw(BMessage);
+		Window.draw(BMessage);
 		Window.display();
 		
 		SetCursor(Window, mousePos, VertexDrawingQueue, EdgeDrawingQueue, AddVertexButton, AddEdgeButton, DeleteButton, ApplyButton, SalesmanButton);
