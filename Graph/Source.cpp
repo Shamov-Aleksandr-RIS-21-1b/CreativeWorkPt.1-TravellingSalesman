@@ -476,7 +476,7 @@ int main()
 
 							DrawEdges(Window, EdgeDrawingQueue);
 							BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
-							DrawButtons(Window, 3, AddVertexButton, AddEdgeButton, DeleteButton);
+							DrawButtons(Window, 4, AddVertexButton, AddEdgeButton, DeleteButton, SalesmanButton);
 							VertexDrawingQueue[i]->set_color(VertexHighlightedColor);
 							DrawVertexes(Window, VertexDrawingQueue);
 							Window.display();
@@ -508,7 +508,7 @@ int main()
 
 							BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
 							DrawEdges(Window, EdgeDrawingQueue);
-							DrawButtons(Window, 3, AddVertexButton, AddEdgeButton, DeleteButton);
+							DrawButtons(Window, 4, AddVertexButton, AddEdgeButton, DeleteButton, SalesmanButton);
 							DrawVertexes(Window, VertexDrawingQueue);
 
 							Window.display();
