@@ -502,14 +502,14 @@ int main()
 							vector<VertexCircle*>::iterator it = VertexDrawingQueue.begin() + i;
 							VertexDrawingQueue.erase(it);
 							VertexDrawingQueue.push_back(TmpVertexes[0]);
-							TmpVertexes.clear();
 							DrawVertexes(Window, VertexDrawingQueue);
 							Window.display();
 
 							VertexSettingsWindow(VertexDrawingQueue[i], G);
 							
 							Continue = false;
-							VertexDrawingQueue[i]->set_color(VertexDefaultColor);
+							TmpVertexes[0]->set_color(VertexDefaultColor);
+							TmpVertexes.clear();
 						}
 					}
 
