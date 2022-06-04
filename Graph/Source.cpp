@@ -12,7 +12,6 @@ using namespace std;
 const Color WindowColor = Color(240, 211, 193);
 const int SpawnX = 60;
 const int SpawnY = 60;
-const int AllButtonsTextSize = 50;
 
 int main()
 {
@@ -499,6 +498,11 @@ int main()
 							BMessage.set_string(Window, "Click and hold the LMB to move the vertex\nClick RMB to edit a vertex or edge");
 							DrawButtons(Window, 4, AddVertexButton, AddEdgeButton, DeleteButton, SalesmanButton);
 							VertexDrawingQueue[i]->set_color(VertexHighlightedColor);
+							TmpVertexes.push_back(VertexDrawingQueue[i]);
+							vector<VertexCircle*>::iterator it = VertexDrawingQueue.begin() + i;
+							VertexDrawingQueue.erase(it);
+							VertexDrawingQueue.push_back(TmpVertexes[0]);
+							TmpVertexes.clear();
 							DrawVertexes(Window, VertexDrawingQueue);
 							Window.display();
 

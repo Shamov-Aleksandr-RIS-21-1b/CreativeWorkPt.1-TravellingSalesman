@@ -57,6 +57,10 @@ public:
 		{
 			C.setRadius(textRect.width / 2);
 		}
+		else if (C.getRadius() > 50)
+		{
+			C.setRadius(50);
+		}
 		C.setOrigin(C.getRadius(), C.getRadius());
 		text.setOrigin(textRect.width / 2, textRect.height / 2);
 		text.setPosition(C.getPosition().x, C.getPosition().y - text.getCharacterSize() / 4);
