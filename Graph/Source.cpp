@@ -60,7 +60,7 @@ int main()
 		Window.draw(BMessage);
 		Window.display();
 		
-		SetCursor(Window, mousePos, VertexDrawingQueue, EdgeDrawingQueue, AddVertexButton, AddEdgeButton, DeleteButton, ApplyButton, SalesmanButton);
+		SetCursor(Window, mousePos, VertexDrawingQueue, EdgeDrawingQueue, AddVertexButton, AddEdgeButton, DeleteButton, ApplyButton, SalesmanButton, MustShowApply);
 
 		Event event;
 		while (Window.pollEvent(event))

@@ -74,7 +74,7 @@ inline void CheckEdges(std::vector<EdgeLine*>& TmpEdges)
 	}
 }
 
-void SetCursor(RenderWindow& Window, const Vector2i& mousePos, std::vector<VertexCircle*>& VertexDrawingQueue, std::vector<EdgeLine*>& EdgeDrawingQueue, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton)
+void SetCursor(RenderWindow& Window, const Vector2i& mousePos, std::vector<VertexCircle*>& VertexDrawingQueue, std::vector<EdgeLine*>& EdgeDrawingQueue, Button& AddVertexButton, Button& AddEdgeButton, Button& DeleteButton, Button& ApplyButton, Button& SalesmanButton, const bool& MustShowApply)
 {
 	bool isCursor = true;
 	if (mousePos.y >= 0)
@@ -155,7 +155,7 @@ void SetCursor(RenderWindow& Window, const Vector2i& mousePos, std::vector<Verte
 			if (cursor.loadFromSystem(Cursor::Hand))
 				Window.setMouseCursor(cursor);
 		}
-		else if (ApplyButton.contain(mousePos))
+		else if (ApplyButton.contain(mousePos) && MustShowApply)
 		{
 			Cursor cursor;
 			if (cursor.loadFromSystem(Cursor::Hand))
