@@ -231,7 +231,7 @@ void Graph<T>::delete_vertex(const std::string& name)
 	matrix.erase(m);
 	for (int i = 0; i < vertexes.size(); i++)
 	{
-		vector<T>::template iterator m1 = matrix[i].begin();
+		std::vector<T>::template iterator m1 = matrix[i].begin();
 		for (int j = 0; j < k; j++)
 		{
 			m1++;

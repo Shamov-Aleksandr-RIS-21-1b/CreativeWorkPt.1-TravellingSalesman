@@ -432,7 +432,7 @@ int main()
 										}
 										else
 										{
-											BMessage.set_string(Window, "Not all vertices have weight.");
+											BMessage.set_string(Window, "Not all edges have weight.");
 										}
 									}
 								}
