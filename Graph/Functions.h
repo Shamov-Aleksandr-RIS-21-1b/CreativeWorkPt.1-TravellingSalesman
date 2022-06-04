@@ -189,7 +189,7 @@ void SetCursor(RenderWindow& Window, const Vector2i& mousePos, std::vector<Verte
 	}
 }
 
-void VertexSettingsWindow(VertexCircle*& Vert, Graph<int>& G)
+void VertexSettingsWindow(VertexCircle*& Vert, const std::vector<EdgeLine*>& EdgeDrawingQueue, Graph<int>& G)
 {
 	string old_name = Vert->getText();
 
@@ -261,6 +261,17 @@ void VertexSettingsWindow(VertexCircle*& Vert, Graph<int>& G)
 							if (!G.is_vertex(new_name))
 							{
 								Vert->setText(new_name);
+								for (int i = 0; i < EdgeDrawingQueue.size(); i++)
+								{
+									if (EdgeDrawingQueue[i]->get_start() == Vert)
+									{
+										EdgeDrawingQueue[i]->set_start(Vert);
+									}
+									else if (EdgeDrawingQueue[i]->get_end() == Vert)
+									{
+										EdgeDrawingQueue[i]->set_end(Vert);
+									}
+								}
 								G.set_vertex_name(old_name, new_name);
 
 								message.setString("Changes saved.");

@@ -505,7 +505,7 @@ int main()
 							DrawVertexes(Window, VertexDrawingQueue);
 							Window.display();
 
-							VertexSettingsWindow(VertexDrawingQueue[i], G);
+							VertexSettingsWindow(TmpVertexes[0], EdgeDrawingQueue, G);
 							
 							Continue = false;
 							TmpVertexes[0]->set_color(VertexDefaultColor);
