@@ -25,10 +25,6 @@ public:
 		this->name = name;
 		this->vertex_weight = vertex_weight;
 	}
-	std::string get_name()
-	{
-		return name;
-	}
 };
 
 template <class T>
@@ -585,7 +581,6 @@ T Graph<T>::continue_Salesman(const std::string& start_vertex, const std::string
 	int current_index = get_vertex_index(current_vertex);
 	visited[current_index] = true;
 	vertexes[current_index].vertex_weight = Infinity<T>;
-	T tmp = vertexes[current_index].vertex_weight;
 
 	for (int i = 0; i < neighbours.size(); i++)
 	{
