@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "VertexCircle.h"
-#include "Button.h";
+#include "Button.h"
 #include "EdgeLine.h"
 #include "cstdarg"
 

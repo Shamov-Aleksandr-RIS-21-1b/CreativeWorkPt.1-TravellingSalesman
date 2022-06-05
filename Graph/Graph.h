@@ -553,10 +553,11 @@ std::vector<GraphVertex<T>*> Graph<T>::Salesman(const std::string& start_vertex)
 	std::vector<bool> visited(vertexes.size());
 	std::fill(visited.begin(), visited.end(), false);
 	visited[start_index] = true;
-	for (int i = 0; i < vertexes.size(); i++)
+	/*for (int i = 0; i < vertexes.size(); i++)
 	{
 		vertexes[i].vertex_weight = Infinity<T>;
-	}
+	}*/
+	vertexes[start_index].vertex_weight = Infinity<T>;
 
 	for (int i = 0; i < neighbours.size(); i++)
 	{
