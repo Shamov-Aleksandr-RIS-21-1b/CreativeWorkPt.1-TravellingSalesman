@@ -32,7 +32,6 @@ c:\users\александр\source\repos\graph\graph\textmessage.h(25): warning 
           [
               T=unsigned int
           ]
-c:\users\александр\source\repos\graph\graph\functions.h(4): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 c:\users\александр\source\repos\graph\graph\functions.h(86): warning C4018: >=: несоответствие типов со знаком и без знака
 c:\users\александр\source\repos\graph\graph\functions.h(98): warning C4018: >=: несоответствие типов со знаком и без знака
 c:\users\александр\source\repos\graph\graph\functions.h(102): warning C4018: >=: несоответствие типов со знаком и без знака
